@@ -1,0 +1,7 @@
+cat /etc/os-release 2>/dev/null || uname -a
+
+
+grep '/bash$' /etc/passwd | cut -d: -f1
+
+
+ss -tulnp | awk 'NR==1 || /LISTEN/'
